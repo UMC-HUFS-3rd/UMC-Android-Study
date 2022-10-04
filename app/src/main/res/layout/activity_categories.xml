@@ -1,0 +1,366 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <ImageView
+        android:id="@+id/categoriesBackground"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:background="@color/purple_500"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Categories"
+        android:textSize="20sp"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        app:layout_constraintTop_toTopOf="@id/categoriesBackground"
+        app:layout_constraintStart_toStartOf="@id/categoriesBackground"
+        app:layout_constraintBottom_toBottomOf="@id/categoriesBackground"
+        android:layout_marginLeft="20dp"/>
+
+    <TextView
+        android:id="@+id/categoriesNotice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/categories_notice"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:textSize="30sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/categoriesBackground"
+        android:layout_marginLeft="18dp"
+        android:layout_marginTop="15dp"
+        />
+
+    <ImageView
+        android:id="@+id/circle1"
+        android:layout_width="110dp"
+        android:layout_height="110dp"
+        android:src="@drawable/circle"
+        app:layout_constraintStart_toStartOf="@id/categoriesNotice"
+        app:layout_constraintTop_toBottomOf="@id/categoriesNotice"
+        android:layout_marginTop="30dp"
+        />
+
+    <ImageView
+        android:id="@+id/businessIcon"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:src="@drawable/ic_business"
+        app:layout_constraintStart_toStartOf="@id/circle1"
+        app:layout_constraintEnd_toEndOf="@id/circle1"
+        app:layout_constraintTop_toTopOf="@id/circle1"
+        app:layout_constraintBottom_toBottomOf="@id/circle1"
+        android:layout_marginBottom="25dp"
+        android:padding="7dp"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="@id/circle1"
+        app:layout_constraintEnd_toEndOf="@id/circle1"
+        app:layout_constraintTop_toBottomOf="@id/businessIcon"
+        android:text="@string/business_text"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:textSize="15sp"
+        />
+
+    <ImageView
+        android:id="@+id/circle2"
+        android:layout_width="110dp"
+        android:layout_height="110dp"
+        android:src="@drawable/circle"
+        app:layout_constraintStart_toEndOf="@id/circle1"
+        app:layout_constraintTop_toTopOf="@id/circle1"
+        android:layout_marginLeft="20dp"
+        />
+
+    <ImageView
+        android:id="@+id/entertainmentIcon"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:src="@drawable/ic_outline_music_note_24"
+        app:layout_constraintStart_toStartOf="@id/circle2"
+        app:layout_constraintEnd_toEndOf="@id/circle2"
+        app:layout_constraintTop_toTopOf="@id/circle2"
+        app:layout_constraintBottom_toBottomOf="@id/circle2"
+        android:layout_marginBottom="25dp"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="@id/circle2"
+        app:layout_constraintEnd_toEndOf="@id/circle2"
+        app:layout_constraintTop_toBottomOf="@id/entertainmentIcon"
+        android:text="@string/entertainment_text"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:textSize="14sp"
+        />
+
+
+    <ImageView
+        android:id="@+id/circle3"
+        android:layout_width="110dp"
+        android:layout_height="110dp"
+        android:src="@drawable/circle"
+        app:layout_constraintStart_toEndOf="@id/circle2"
+        app:layout_constraintTop_toTopOf="@id/circle2"
+        android:layout_marginLeft="20dp"
+        />
+
+    <ImageView
+        android:id="@+id/generalIcon"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:src="@drawable/ic_baseline_people_outline_24"
+        app:layout_constraintStart_toStartOf="@id/circle3"
+        app:layout_constraintEnd_toEndOf="@id/circle3"
+        app:layout_constraintTop_toTopOf="@id/circle3"
+        app:layout_constraintBottom_toBottomOf="@id/circle3"
+        android:layout_marginBottom="25dp"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="@id/circle3"
+        app:layout_constraintEnd_toEndOf="@id/circle3"
+        app:layout_constraintTop_toBottomOf="@id/generalIcon"
+        android:text="@string/general_text"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:textSize="15sp"
+        />
+
+    <ImageView
+        android:id="@+id/circle4"
+        android:layout_width="110dp"
+        android:layout_height="110dp"
+        android:src="@drawable/circle"
+        app:layout_constraintStart_toStartOf="@id/circle1"
+        app:layout_constraintTop_toBottomOf="@id/circle1"
+        android:layout_marginTop="20dp"
+        />
+
+    <ImageView
+        android:id="@+id/healthIcon"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:src="@drawable/ic_health"
+        app:layout_constraintStart_toStartOf="@id/circle4"
+        app:layout_constraintEnd_toEndOf="@id/circle4"
+        app:layout_constraintTop_toTopOf="@id/circle4"
+        app:layout_constraintBottom_toBottomOf="@id/circle4"
+        android:layout_marginBottom="25dp"
+        android:padding="10dp"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="@id/circle4"
+        app:layout_constraintEnd_toEndOf="@id/circle4"
+        app:layout_constraintTop_toBottomOf="@id/healthIcon"
+        android:text="@string/health_text"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:textSize="15sp"
+        />
+
+    <ImageView
+        android:id="@+id/circle5"
+        android:layout_width="110dp"
+        android:layout_height="110dp"
+        android:src="@drawable/circle"
+        app:layout_constraintTop_toTopOf="@id/circle4"
+        app:layout_constraintStart_toStartOf="@id/circle2"
+        />
+
+    <ImageView
+        android:id="@+id/scienceIcon"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:padding="10dp"
+        android:src="@drawable/ic_science"
+        app:layout_constraintStart_toStartOf="@id/circle5"
+        app:layout_constraintEnd_toEndOf="@id/circle5"
+        app:layout_constraintTop_toTopOf="@id/circle5"
+        app:layout_constraintBottom_toBottomOf="@id/circle5"
+        android:layout_marginBottom="25dp"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="@id/circle5"
+        app:layout_constraintEnd_toEndOf="@id/circle5"
+        app:layout_constraintTop_toBottomOf="@id/scienceIcon"
+        android:text="@string/science_text"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:textSize="15sp"
+        />
+
+    <ImageView
+        android:id="@+id/circle6"
+        android:layout_width="110dp"
+        android:layout_height="110dp"
+        android:src="@drawable/circle"
+        app:layout_constraintTop_toTopOf="@id/circle4"
+        app:layout_constraintStart_toStartOf="@id/circle3"
+        />
+
+    <ImageView
+        android:id="@+id/sportsIcon"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:src="@drawable/ic_sports"
+        app:layout_constraintStart_toStartOf="@id/circle6"
+        app:layout_constraintEnd_toEndOf="@id/circle6"
+        app:layout_constraintTop_toTopOf="@id/circle6"
+        app:layout_constraintBottom_toBottomOf="@id/circle6"
+        android:layout_marginBottom="25dp"
+        android:padding="5dp"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="@id/circle6"
+        app:layout_constraintEnd_toEndOf="@id/circle6"
+        app:layout_constraintTop_toBottomOf="@id/sportsIcon"
+        android:text="@string/sports_text"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:textSize="15sp"
+        />
+
+    <ImageView
+        android:id="@+id/circle7"
+        android:layout_width="110dp"
+        android:layout_height="110dp"
+        android:src="@drawable/circle"
+        app:layout_constraintStart_toStartOf="@id/circle1"
+        app:layout_constraintTop_toBottomOf="@id/circle4"
+        android:layout_marginTop="20dp"
+        />
+
+    <ImageView
+        android:id="@+id/technologyIcon"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:src="@drawable/ic_technology"
+        app:layout_constraintStart_toStartOf="@id/circle7"
+        app:layout_constraintEnd_toEndOf="@id/circle7"
+        app:layout_constraintTop_toTopOf="@id/circle7"
+        app:layout_constraintBottom_toBottomOf="@id/circle7"
+        android:layout_marginBottom="25dp"
+        android:padding="5dp"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="@id/circle7"
+        app:layout_constraintEnd_toEndOf="@id/circle7"
+        app:layout_constraintTop_toBottomOf="@id/technologyIcon"
+        android:text="@string/technology_text"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:textSize="15sp"
+        />
+
+
+    <ImageView
+        android:id="@+id/tabBackground"
+        android:layout_width="match_parent"
+        android:layout_height="65dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:background="@color/purple_500"/>
+
+    <ImageView
+        android:id="@+id/topNewsIcon"
+        android:layout_width="130dp"
+        android:layout_height="40dp"
+        app:layout_constraintTop_toTopOf="@id/tabBackground"
+        app:layout_constraintStart_toStartOf="@id/tabBackground"
+        android:src="@drawable/ic_outline_newspaper_gray_24"
+        android:layout_marginTop="2dp"
+        android:layout_marginLeft="5dp"
+        android:padding="7dp"
+        />
+
+    <TextView
+        android:id="@+id/topNewsText"
+        android:layout_width="130dp"
+        android:layout_height="wrap_content"
+        android:text="Top News"
+        android:textColor="#AFAFAF"
+        android:textSize="15sp"
+        app:layout_constraintTop_toBottomOf="@id/topNewsIcon"
+        app:layout_constraintStart_toStartOf="@id/topNewsIcon"
+        android:gravity="center"
+        />
+
+    <ImageView
+        android:id="@+id/categoriesIcon"
+        android:layout_width="130dp"
+        android:layout_height="40dp"
+        app:layout_constraintTop_toTopOf="@id/tabBackground"
+        app:layout_constraintStart_toEndOf="@id/topNewsIcon"
+        android:src="@drawable/ic_baseline_interests_white_24"
+        android:layout_marginTop="2dp"
+        android:layout_marginLeft="5dp"
+        android:padding="10dp"
+        />
+
+    <TextView
+        android:id="@+id/categoriesText"
+        android:layout_width="130dp"
+        android:layout_height="wrap_content"
+        android:text="Categories"
+        android:textColor="@color/white"
+        android:textSize="15sp"
+        app:layout_constraintTop_toBottomOf="@id/categoriesIcon"
+        app:layout_constraintStart_toStartOf="@id/categoriesIcon"
+        android:gravity="center"
+        />
+
+    <ImageView
+        android:id="@+id/savedIcon"
+        android:layout_width="130dp"
+        android:layout_height="40dp"
+        app:layout_constraintTop_toTopOf="@id/tabBackground"
+        app:layout_constraintStart_toEndOf="@id/categoriesIcon"
+        android:src="@drawable/ic_outline_file_download_24"
+        android:layout_marginTop="2dp"
+        android:layout_marginLeft="5dp"
+        android:padding="3dp"
+        />
+
+    <TextView
+        android:id="@+id/savedText"
+        android:layout_width="130dp"
+        android:layout_height="wrap_content"
+        android:text="Saved"
+        android:textColor="#AFAFAF"
+        android:textSize="15sp"
+        app:layout_constraintTop_toBottomOf="@id/savedIcon"
+        app:layout_constraintStart_toStartOf="@id/savedIcon"
+        android:gravity="center"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

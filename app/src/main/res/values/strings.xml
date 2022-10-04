@@ -8,4 +8,13 @@ McLaughlin, the reigning Olympic champion, was the red-hot favourite and absolut
 The 22-year-old was streaks ahead of the field well before the turn and left her world-class rivals in her wake to cross the line in 50.68sec.
 
 The incredible time chopped nearly a full second off her previous mark of 51.41, set at last year’s Tokyo Olympics.</string>
+    <string name="categories_notice">Choose a category to
+start reading</string>
+    <string name="business_text">business</string>
+    <string name="entertainment_text">entertainment</string>
+    <string name="general_text">general</string>
+    <string name="health_text">health</string>
+    <string name="science_text">science</string>
+    <string name="sports_text">sports</string>
+    <string name="technology_text">technology</string>
 </resources>
