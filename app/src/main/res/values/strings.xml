@@ -11,9 +11,10 @@ start reading</string>
     <string name="science_text">science</string>
     <string name="sports_text">sports</string>
     <string name="technology_text">technology</string>
-    <string name="first_article_title">10 of the Cheapest and Healthiest Ways
-to Feed a Group, According to Reddit...</string>
+    <string name="first_article_title">10 of the Cheapest and Healthiest Ways\nto Feed a Group, According to Reddit...</string>
     <string name="journalist_PedroBerrill">Pedro Berrill</string>
     <string name="second_article_title">Nasa set to announce plans to return samples from Mars back to Earth</string>
     <string name="journalist_AnnaDietz">Anna Dietz</string>
+    <string name="journalist_KrisHolt">Kris Holt</string>
+    <string name="basketball_article_title">Lebron James, Rick and Morty are coming\nto ‘MultiVersus’</string>
 </resources>

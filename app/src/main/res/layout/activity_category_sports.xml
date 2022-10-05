@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/newsAppBackground"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:background="@color/purple_500"/>
+
+    <ImageView
+        android:id="@+id/backArrow"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:src="@drawable/ic_baseline_arrow_back_24"
+        app:layout_constraintStart_toStartOf="@id/newsAppBackground"
+        app:layout_constraintBottom_toBottomOf="@id/newsAppBackground"
+        app:layout_constraintTop_toTopOf="@id/newsAppBackground"
+        android:layout_marginLeft="10dp"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Category - Sports"
+        android:textSize="20sp"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@id/backArrow"
+        app:layout_constraintTop_toTopOf="@id/newsAppBackground"
+        app:layout_constraintBottom_toBottomOf="@id/newsAppBackground"
+        android:layout_marginLeft="20dp"/>
+
+
+    <ImageView
+        android:id="@+id/firstArticleBackground"
+        android:layout_width="370dp"
+        android:layout_height="250dp"
+        app:layout_constraintTop_toBottomOf="@id/newsAppBackground"
+        app:layout_constraintStart_toStartOf="parent"
+        android:src="@drawable/round_rectangular"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="20dp"
+        />
+
+    <ImageView
+        android:id="@+id/firstArticlePhoto"
+        android:layout_width="370dp"
+        android:layout_height="147dp"
+        android:src="@drawable/third_article_pic"
+        app:layout_constraintStart_toStartOf="@id/firstArticleBackground"
+        app:layout_constraintTop_toTopOf="@id/firstArticleBackground"/>
+
+    <TextView
+        android:id="@+id/firstArticleTitle"
+        android:layout_width="360dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:text="@string/article_name"
+        android:textColor="@color/black"
+        android:textSize="18dp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@id/firstArticleBackground"
+        tools:layout_editor_absoluteY="237dp"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/firstArticleJournalist"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/journalist_PedroBerrill"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:textSize="15dp"
+        app:layout_constraintTop_toBottomOf="@id/firstArticleTitle"
+        app:layout_constraintStart_toStartOf="@id/firstArticleTitle"
+        android:layout_marginTop="10dp"
+        />
+
+    <TextView
+        android:id="@+id/firstArticleUpload"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="3 hours ago"
+        android:textSize="15dp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toTopOf="@id/firstArticleJournalist"
+        app:layout_constraintEnd_toEndOf="@id/firstArticleBackground"
+        android:layout_marginRight="10dp"/>
+
+    <ImageView
+        android:id="@+id/secondArticleBackground"
+        android:layout_width="370dp"
+        android:layout_height="250dp"
+        app:layout_constraintTop_toBottomOf="@id/firstArticleBackground"
+        app:layout_constraintStart_toStartOf="parent"
+        android:src="@drawable/round_rectangular"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="20dp"
+        />
+
+    <ImageView
+        android:id="@+id/baketballArticlePhoto"
+        android:layout_width="370dp"
+        android:layout_height="147dp"
+        android:src="@drawable/basketball_article_photo"
+        app:layout_constraintTop_toTopOf="@id/secondArticleBackground"
+        app:layout_constraintStart_toStartOf="@id/secondArticleBackground"
+        app:layout_constraintEnd_toEndOf="@id/secondArticleBackground"/>
+
+    <TextView
+        android:id="@+id/secondArticleTitle"
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:text="@string/basketball_article_title"
+        android:textColor="@color/black"
+        android:textSize="18dp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@id/firstArticleTitle"
+        tools:layout_editor_absoluteY="507dp"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/secondArticleJournalist"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/journalist_KrisHolt"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:textSize="15dp"
+        app:layout_constraintTop_toBottomOf="@id/secondArticleTitle"
+        app:layout_constraintStart_toStartOf="@id/secondArticleTitle"
+        android:layout_marginTop="10dp"
+        />
+
+    <TextView
+        android:id="@+id/secondArticleUpload"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="9 hours ago"
+        android:textSize="15dp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toTopOf="@id/secondArticleJournalist"
+        app:layout_constraintEnd_toEndOf="@id/secondArticleBackground"
+        android:layout_marginRight="10dp"/>
+
+    <ImageView
+        android:id="@+id/thirdArticleBackground"
+        android:layout_width="370dp"
+        android:layout_height="250dp"
+        app:layout_constraintTop_toBottomOf="@id/secondArticleBackground"
+        app:layout_constraintStart_toStartOf="parent"
+        android:src="@drawable/round_rectangular"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="20dp"
+        />
+
+    <ImageView
+        android:layout_width="370dp"
+        android:layout_height="147dp"
+        android:src="@drawable/bicycle_article_photo"
+        app:layout_constraintTop_toBottomOf="@id/secondArticleBackground"
+        app:layout_constraintStart_toStartOf="@id/secondArticleBackground"
+        app:layout_constraintEnd_toEndOf="@id/secondArticleBackground"
+        android:layout_marginTop="20dp"/>
+
+
+    <ImageView
+        android:id="@+id/tabBackground"
+        android:layout_width="match_parent"
+        android:layout_height="65dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:background="@color/purple_500"/>
+
+    <ImageView
+        android:id="@+id/topNewsIcon"
+        android:layout_width="130dp"
+        android:layout_height="40dp"
+        app:layout_constraintTop_toTopOf="@id/tabBackground"
+        app:layout_constraintStart_toStartOf="@id/tabBackground"
+        android:src="@drawable/ic_outline_newspaper_gray_24"
+        android:layout_marginTop="2dp"
+        android:layout_marginLeft="5dp"
+        android:padding="7dp"
+        />
+
+    <TextView
+        android:id="@+id/topNewsText"
+        android:layout_width="130dp"
+        android:layout_height="wrap_content"
+        android:text="Top News"
+        android:textColor="#AFAFAF"
+        android:textSize="15sp"
+        app:layout_constraintTop_toBottomOf="@id/topNewsIcon"
+        app:layout_constraintStart_toStartOf="@id/topNewsIcon"
+        android:gravity="center"
+        />
+
+    <ImageView
+        android:id="@+id/categoriesIcon"
+        android:layout_width="130dp"
+        android:layout_height="40dp"
+        app:layout_constraintTop_toTopOf="@id/tabBackground"
+        app:layout_constraintStart_toEndOf="@id/topNewsIcon"
+        android:src="@drawable/ic_baseline_interests_white_24"
+        android:layout_marginTop="2dp"
+        android:layout_marginLeft="5dp"
+        android:padding="10dp"
+        />
+
+    <TextView
+        android:id="@+id/categoriesText"
+        android:layout_width="130dp"
+        android:layout_height="wrap_content"
+        android:text="Categories"
+        android:textColor="#FFFFFF"
+        android:textSize="15sp"
+        app:layout_constraintTop_toBottomOf="@id/categoriesIcon"
+        app:layout_constraintStart_toStartOf="@id/categoriesIcon"
+        android:gravity="center"
+        />
+
+    <ImageView
+        android:id="@+id/savedIcon"
+        android:layout_width="130dp"
+        android:layout_height="40dp"
+        app:layout_constraintTop_toTopOf="@id/tabBackground"
+        app:layout_constraintStart_toEndOf="@id/categoriesIcon"
+        android:src="@drawable/ic_outline_file_download_24"
+        android:layout_marginTop="2dp"
+        android:layout_marginLeft="5dp"
+        android:padding="3dp"
+        />
+
+    <TextView
+        android:id="@+id/savedText"
+        android:layout_width="130dp"
+        android:layout_height="wrap_content"
+        android:text="Saved"
+        android:textColor="#AFAFAF"
+        android:textSize="15sp"
+        app:layout_constraintTop_toBottomOf="@id/savedIcon"
+        app:layout_constraintStart_toStartOf="@id/savedIcon"
+        android:gravity="center"
+        />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
