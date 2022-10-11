@@ -23,11 +23,29 @@ class MainActivity : AppCompatActivity() {
             .commitAllowingStateLoss()
 
         viewBinding.bottomNavigationView.setOnItemSelectedListener{ item ->
-            when(item.itemId) {
+            when (item.itemId) {
                 R.id.menu_top_news -> {
                     supportFragmentManager
                         .beginTransaction()
-                        .replace(viewBinding.frameLayout.id, FragmentTopnews)
+                        .replace(R.id.frame_layout, FragmentTopnews())
+                        .commitAllowingStateLoss()
+                    return@setOnItemSelectedListener true
+                }
+
+                R.id.menu_categories -> {
+                    supportFragmentManager
+                        .beginTransaction()
+                        .replace(R.id.frame_layout, FragmentCategories())
+                        .commitAllowingStateLoss()
+                    return@setOnItemSelectedListener true
+                }
+
+                else -> {
+                    supportFragmentManager
+                        .beginTransaction()
+                        .replace(R.id.frame_layout, FragmentSaved())
+                        .commitAllowingStateLoss()
+                    return@setOnItemSelectedListener true
                 }
             }
         }
