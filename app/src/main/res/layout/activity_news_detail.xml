@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/tv_news_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="40dp"
+            android:layout_marginLeft="40dp"
+            android:text="구글 픽셀폰, 아이폰·갤럭시폰만큼 인기 없는 이유"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            app:layout_constraintBottom_toTopOf="@id/iv_image"
+            app:layout_constraintEnd_toEndOf="@id/iv_image"
+            app:layout_constraintStart_toStartOf="@id/iv_image"
+            app:layout_constraintTop_toTopOf="parent"
+            android:drawableEnd="@drawable/ic_round_bookmark_border_24"
+            android:drawablePadding="20dp"/>
+
+        <TextView
+            android:id="@+id/tv_news_author"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="김기자"
+            android:textSize="8sp"
+            app:layout_constrainedWidth="true"
+            app:layout_constraintHorizontal_bias="0"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintStart_toStartOf="@id/iv_image"
+            app:layout_constraintBottom_toTopOf="@+id/iv_image"
+            app:layout_constraintRight_toLefttOf="@id/tv_news_date"
+            app:layout_constraintTop_toBottomOf="@id/tv_news_title" />
+
+        <TextView
+            android:id="@+id/tv_news_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="2022.10.11"
+            android:textSize="8sp"
+            app:layout_constraintBottom_toTopOf="@id/iv_image"
+            app:layout_constraintEnd_toEndOf="@id/iv_image"
+            app:layout_constraintLeft_toRightOf="@id/tv_news_author"
+            app:layout_constraintTop_toBottomOf="@+id/tv_news_title" />
+
+        <ImageView
+            android:id="@+id/iv_image"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginLeft="40dp"
+            android:layout_marginRight="40dp"
+            android:contentDescription="PhotoCard"
+            android:scaleType="centerCrop"
+            android:src="@drawable/img_news"
+            app:layout_constraintDimensionRatio="2:1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_news_date" />
+
+        <!--  style, string.xml : 언어변환 가능 , resource 단축키 (option+enter)    -->
+        <!--            android:ellipsize="end"-->
+        <!--            android:maxLines="2"-->
+        <TextView
+            android:id="@+id/tv_news_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="40dp"
+            android:layout_marginRight="40dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            android:text="삼성전자(005930)가 2023년 형 보급형 스마트폰 출시로 글로벌 판매량 1위 수성에 나선다. 가장 판매량이 많은 갤럭시A 저가형 모델부터 글로벌 전략지에 조기 투입하고 있다. 경기침체에 올해 스마트폰 총 판매량이 감소할 전망인 가운데, 삼성전자가 일찌감치 물량공세로 경쟁자 애플 견제에 나섰다는 평가다."
+            android:textSize="10sp"
+            android:textColor="@color/black"
+            android:lineSpacingExtra="5dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/iv_image" />
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
