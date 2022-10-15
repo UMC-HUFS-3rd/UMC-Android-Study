@@ -29,8 +29,7 @@
             android:paddingLeft="16dp"
             android:paddingBottom="18dp"
             android:paddingTop="18dp"
-            android:paddingRight="16dp">
-        </ImageView>
+            android:paddingRight="16dp"/>
         <ImageView
             android:id="@+id/icon_music"
             android:layout_width="wrap_content"
@@ -39,9 +38,8 @@
             android:paddingLeft="16dp"
             android:paddingBottom="18dp"
             android:paddingTop="18dp"
-            android:paddingRight="16dp"
-            >
-        </ImageView>
+            android:paddingRight="16dp"/>
+
         <ImageView
             android:id="@+id/icon_group"
             android:layout_width="wrap_content"
@@ -50,8 +48,7 @@
             android:paddingLeft="16dp"
             android:paddingBottom="18dp"
             android:paddingTop="18dp"
-            android:paddingRight="16dp">
-        </ImageView>
+            android:paddingRight="16dp"/>
         <ImageView
             android:id="@+id/icon_plus"
             android:layout_width="wrap_content"
@@ -60,8 +57,7 @@
             android:paddingLeft="16dp"
             android:paddingBottom="18dp"
             android:paddingTop="18dp"
-            android:paddingRight="16dp">
-        </ImageView>
+            android:paddingRight="16dp"/>
         <ImageView
             android:id="@+id/icon_chemistry"
             android:layout_width="wrap_content"
@@ -70,8 +66,7 @@
             android:paddingLeft="16dp"
             android:paddingBottom="18dp"
             android:paddingTop="18dp"
-            android:paddingRight="16dp">
-        </ImageView>
+            android:paddingRight="16dp"/>
         <ImageView
             android:id="@+id/icon_sports"
             android:layout_width="wrap_content"
@@ -80,8 +75,7 @@
             android:paddingLeft="16dp"
             android:paddingBottom="18dp"
             android:paddingTop="18dp"
-            android:paddingRight="16dp">
-        </ImageView>
+            android:paddingRight="16dp"/>
         <ImageView
             android:id="@+id/icon_technology"
             android:layout_width="wrap_content"
@@ -90,8 +84,7 @@
             android:paddingLeft="16dp"
             android:paddingBottom="18dp"
             android:paddingTop="18dp"
-            android:paddingRight="16dp">
-        </ImageView>
+            android:paddingRight="16dp"/>
     </GridLayout>
 
 
