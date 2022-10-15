@@ -4,7 +4,10 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".ListFragment">
+    tools:context=".ListFragment"
+    android:paddingStart="10dp"
+    android:paddingEnd="10dp"
+    android:paddingTop="10dp">
 
         <ImageView
             android:id="@+id/iv_content_photo"
@@ -23,31 +26,39 @@
             android:layout_height="wrap_content"
             android:text="@string/news_title_1"
             android:textSize="15sp"
+            android:textFontWeight="100"
+            android:paddingTop="30dp"
             app:layout_constraintEnd_toEndOf="@+id/iv_content_photo"
             app:layout_constraintStart_toStartOf="@+id/iv_content_photo"
             app:layout_constraintTop_toBottomOf="@+id/iv_content_photo" />
-
-        <TextView
-            android:id="@+id/tv_content_publishor"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/publishor"
-            android:textSize="14sp"
-            app:layout_constraintTop_toBottomOf="@id/tv_content_title"
-            app:layout_constraintStart_toStartOf="@id/tv_content_title"
-            app:layout_constraintEnd_toStartOf="@id/tv_content_date"
-            app:layout_constraintHorizontal_chainStyle="spread"
-            />
+<LinearLayout
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    app:layout_constraintTop_toBottomOf="@id/tv_content_title"
+    app:layout_constraintStart_toStartOf="@id/tv_content_title"
+    app:layout_constraintEnd_toEndOf="@id/tv_content_title"
+    android:weightSum="2">
+    <TextView
+        android:id="@+id/tv_content_publishor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/publishor"
+        android:textSize="14sp"
+        app:layout_constraintTop_toBottomOf="@id/tv_content_title"
+        app:layout_constraintStart_toStartOf="@id/tv_content_title"
+        app:layout_constraintEnd_toStartOf="@id/tv_content_date"
+        />
 
 
     <TextView
         android:id="@+id/tv_content_date"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-
         android:text="@string/publish_date"
-        app:layout_constraintHorizontal_chainStyle="spread"
         app:layout_constraintStart_toEndOf="@id/tv_content_publishor"
         app:layout_constraintTop_toBottomOf="@id/tv_content_title" />
+
+</LinearLayout>
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
