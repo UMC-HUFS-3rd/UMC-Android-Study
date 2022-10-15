@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/menu_topnews"
+        android:title="top_news"
+        android:icon="@drawable/ic_baseline_home_work_24"
+        />
+<item
+    android:id="@+id/menu_categories"
+    android:title="categoires"
+    android:icon="@drawable/ic_baseline_category_24"
+    />
+    <item
+        android:id="@+id/menu_saved"
+        android:title="saved"
+        android:icon="@drawable/ic_baseline_save_alt_24"/>
+</menu>

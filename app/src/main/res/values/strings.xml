@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">NewsApplication</string>
+    <string name="news_title_1">중국 코로나 확진 증가...상하이·시안 등지 통제 강화</string>
+    <string name="news_content_1">중국 전역에서 신종 코로나바이러스 감염증 환자가 다시 급증세를 보이면서 다수의 지방 정부들이 주민들의 이동에 대한 통제를 강화하고 있습니다.</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="publishor">김민서</string>
+    <string name="publish_date">3 days ago</string>
 </resources>

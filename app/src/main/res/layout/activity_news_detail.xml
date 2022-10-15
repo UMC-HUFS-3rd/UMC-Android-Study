@@ -1,67 +1,53 @@
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical">
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-        <TextView
-            android:id="@+id/detail_title_text"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="제목입니다 블라블라라"
-            android:textSize="16dp"></TextView>
-        <ImageView
-            android:id="@+id/detail_title_icon"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/ic_baseline_star_border_24">
-        </ImageView>
+    tools:context=".ListFragment">
 
-    </LinearLayout>
     <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-        <TextView
-            android:id="@+id/cw_publishor"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="4dp"
-            android:text="김민서"
-            android:textSize="14dp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/cw_content"
-            app:layout_constraintEnd_toStartOf="@id/cw_date"></TextView>
-
-        <TextView
-            android:id="@+id/cw_date"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="3 days ago"
-            android:textSize="14dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/cw_publishor"
-            app:layout_constraintTop_toBottomOf="@+id/cw_content"></TextView>
-    </LinearLayout>
-    <ImageView
-        android:id="@+id/cw_photo"
-        android:layout_width="326dp"
-        android:layout_height="136dp"
-        android:src="@drawable/pic1"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"></ImageView>
-    <TextView
-        android:layout_width="match_parent"
+        android:id="@+id/linearLayout"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="우선 제목이 기사내용을 지나치게 단순화하거나 왜곡하지 않는가 체크해야합니다.
+        android:orientation="horizontal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
-제목은 기사읽기의 방향을 결정하기 때문에 그 중요성에 대해 간단히 생각해 볼 필요가 있습니다.독자들은 대부분 제목을 보고 기사를 읽을 것인가 말 것인가를 결정하기 때문입니다. 제목은 또 기사의 중요도를 가시적으로 보여주는 기준입니다."
-        android:textSize="12dp">
+        <TextView
+            android:id="@+id/tv_content_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/news_title_1"
+            android:textSize="16sp" />
 
-    </TextView>
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_baseline_star_border_24" />
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/iv_content_photo"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/pic1"
+        app:layout_constraintDimensionRatio="2:1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/linearLayout" />
+
+    <TextView
+        android:id="@+id/tv_content_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/news_content_1"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="@id/iv_content_photo"
+        app:layout_constraintStart_toStartOf="@id/iv_content_photo"
+        app:layout_constraintTop_toBottomOf="@id/iv_content_photo" />
 
 
-
-
-
-</LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
