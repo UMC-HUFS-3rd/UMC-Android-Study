@@ -19,7 +19,7 @@ class MainActivity : AppCompatActivity() {
         supportFragmentManager
             .beginTransaction()
             .replace(viewBinding.frameLayout.id,ListFragment())
-            .commitAllowingStateLoss()
+            .commit()
         viewBinding.bottomNavigation.setOnNavigationItemSelectedListener(onNavigationItemSelectedListener)
     }
     private val onNavigationItemSelectedListener = BottomNavigationView
@@ -27,18 +27,18 @@ class MainActivity : AppCompatActivity() {
             when(it.itemId){
                 R.id.menu_topnews -> {
                     supportFragmentManager.beginTransaction()
-                        .replace(R.id.frame_layout, ListFragment())
+                        .replace(viewBinding.frameLayout.id, ListFragment())
                         .commit()
                 }
                 R.id.menu_categories -> {
 
                     supportFragmentManager.beginTransaction()
-                        .replace(R.id.frame_layout, CategoryFragment())
+                        .replace((viewBinding.frameLayout.id, CategoryFragment())
                         .commit()
                 }
                 R.id.menu_saved -> {
                     supportFragmentManager.beginTransaction()
-                        .replace(R.id.frame_layout, ListFragment())
+                        .replace(viewBinding.frameLayout.id, ListFragment())
                         .commit()
                 }
             }
