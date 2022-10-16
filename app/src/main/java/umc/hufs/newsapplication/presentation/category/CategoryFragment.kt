@@ -1,6 +1,16 @@
 package umc.hufs.newsapplication.presentation.category
 
-import androidx.fragment.app.Fragment
+import android.os.Bundle
+import android.view.View
+import umc.hufs.newsapplication.R
+import umc.hufs.newsapplication.databinding.FragmentCategoryBinding
+import umc.hufs.newsapplication.presentation.common.base.BaseFragment
 
-class CategoryFragment : Fragment() {
+class CategoryFragment : BaseFragment<FragmentCategoryBinding>(R.layout.fragment_category) {
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
+
+    }
 }
