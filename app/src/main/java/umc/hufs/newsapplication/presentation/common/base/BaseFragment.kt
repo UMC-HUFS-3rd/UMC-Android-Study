@@ -26,7 +26,7 @@ open class BaseFragment<T: ViewDataBinding>(@LayoutRes private val layoutId: Int
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        binding.lifecycleOwner
+        binding.lifecycleOwner = viewLifecycleOwner
     }
 
     override fun onDestroyView() {
