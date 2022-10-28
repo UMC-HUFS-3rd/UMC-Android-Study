@@ -3,9 +3,12 @@ package umc.hufs.newsapplication
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.content.Intent
+import android.view.MenuItem
+import android.widget.FrameLayout
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager.HORIZONTAL
 import androidx.recyclerview.widget.RecyclerView
+import com.google.android.material.bottomnavigation.BottomNavigationView
 import umc.hufs.newsapplication.databinding.ActivityMainBinding
 
 
@@ -16,33 +19,43 @@ class MainActivity : AppCompatActivity() {
     private lateinit var viewAdapter: RecyclerView.Adapter<*>
     private lateinit var viewManager: RecyclerView.LayoutManager
 
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         viewBinding = ActivityMainBinding.inflate(layoutInflater)
-
-        viewBinding.rvNewsList.setOnClickListener {
-            val intent = Intent(this, NewsDetailActivity::class.java)
-            startActivity(intent)
-
-        }
         setContentView(R.layout.activity_main)
-        // 1
-        viewManager = LinearLayoutManager(this, HORIZONTAL, true)
+
+        supportFragmentManager
+            .beginTransaction()
+            .replace(viewBinding.framelayout.id, TopNewsFragment())
+            .commit()
+        viewBinding.bottomNavigation.setOnNavigationItemSelectedListener(
+            onNavigationItemSelectedListener
+        )
     }
+
+    private val onNavigationItemSelectedListener = BottomNavigationView
+        .OnNavigationItemSelectedListener {
+            when (it.itemId) {
+                R.id.top_news -> {
+                    supportFragmentManager.beginTransaction()
+                        .replace(viewBinding.framelayout.id, TopNewsFragment())
+                        .commit()
+                }
+                R.id.category -> {
+                    supportFragmentManager.beginTransaction()
+                        .replace(viewBinding.framelayout.id, CategoryFragment())
+                        .commit()
+                }
+                R.id.saved -> {
+                    supportFragmentManager.beginTransaction()
+                        .replace(viewBinding.framelayout.id, SavedNewsFragment())
+                        .commit()
+                }
+            }
+            true
+        }
 }
-        // 2
-//        viewAdapter = MyAdapter()
-//
-//        // 3
-//        recyclerView = findViewById<RecyclerView>(R.id.recyclerview_main).apply {
-//            // use this setting to improve performance if you know that changes
-//            // in content do not change the layout size of the RecyclerView
-//            setHasFixedSize(true)
-//            // use a linear layout manager
-//            layoutManager = viewManager
-//            // specify an viewAdapter (see also next example)
-//            adapter = viewAdapter
-//
-//        }
-//    }
-//}
+
+
+
