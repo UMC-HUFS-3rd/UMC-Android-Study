@@ -5,7 +5,9 @@ plugins {
 
 android {
     compileSdk 32
-
+    viewBinding{
+        enabled = true
+    }
     defaultConfig {
         applicationId "umc.hufs.newsapplication"
         minSdk 23
