@@ -33,7 +33,7 @@ class MainActivity : AppCompatActivity() {
                 R.id.menu_categories -> {
 
                     supportFragmentManager.beginTransaction()
-                        .replace((viewBinding.frameLayout.id, CategoryFragment())
+                        .replace(viewBinding.frameLayout.id, CategoryFragment())
                         .commit()
                 }
                 R.id.menu_saved -> {
