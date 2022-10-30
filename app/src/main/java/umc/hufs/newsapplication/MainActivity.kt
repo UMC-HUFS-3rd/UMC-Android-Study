@@ -16,34 +16,34 @@ class MainActivity : AppCompatActivity() {
         setFragment(TopNewsFragment.toString(), TopNewsFragment)
         initBottomNavigation()
     }
-        private fun initBottomNavigation(){
-            supportFragmentManager
-                .beginTransaction()
-                .replace(viewBinding.bottomNavi.id, TopNewsFragment())
-                .commitAllowingStateLoss()
-            viewBinding.bottomNavi.setOnItemSelectedListener { item ->
-                when (item.itemId) {
-                    R.id.topnews -> {
-                        supportFragmentManager
-                            .beginTransaction()
-                            .replace(R.id.bottomNavi, TopNewsFragment())
-                            .commitAllowingStateLoss()
-                    }
+    private fun initBottomNavigation(){
+        supportFragmentManager
+            .beginTransaction()
+            .replace(viewBinding.bottomNavi.id, TopNewsFragment())
+            .commitAllowingStateLoss()
+        viewBinding.bottomNavi.setOnItemSelectedListener { item ->
+            when (item.itemId) {
+                R.id.topnews -> {
+                    supportFragmentManager
+                        .beginTransaction()
+                        .replace(R.id.bottomNavi, TopNewsFragment())
+                        .commitAllowingStateLoss()
+                }
 
-                    R.id.categories -> {
-                        supportFragmentManager
-                            .beginTransaction()
-                            .replace(R.id.bottomNavi, CategoryFragment())
-                            .commitAllowingStateLoss()
-                    }
-                    else -> {
-                        supportFragmentManager
-                            .beginTransaction()
-                            .replace(R.id.bottomNavi, SavedFragment())
-                            .commitAllowingStateLoss()
-                    }
+                R.id.categories -> {
+                    supportFragmentManager
+                        .beginTransaction()
+                        .replace(R.id.bottomNavi, CategoryFragment())
+                        .commitAllowingStateLoss()
                 }
             }
+            else{
+                    supportFragmentManager
+                        .beginTransaction()
+                        .replace(R.id.bottomNavi, SavedFragment())
+                        .commitAllowingStateLoss()
+            }
+        }
     }
     private fun setFragment(tag:String, fragment: TopNewsFragment.Companion){
         val manager : FragmentManager = supportFragmentManager
