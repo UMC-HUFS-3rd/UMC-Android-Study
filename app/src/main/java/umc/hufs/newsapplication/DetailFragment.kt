@@ -5,20 +5,19 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import umc.hufs.newsapplication.databinding.FragmentCategoryBinding
+import umc.hufs.newsapplication.databinding.FragmentDetailBinding
+import umc.hufs.newsapplication.databinding.FragmentListBinding
 
 
-class CategoryFragment : Fragment() {
+class DetailFragment : Fragment() {
 
-
-    private lateinit var viewBindng : FragmentCategoryBinding
+    private lateinit var viewBindng : FragmentDetailBinding
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
-        viewBindng = FragmentCategoryBinding.inflate(layoutInflater)
+    ):View? {
+        viewBindng = FragmentDetailBinding.inflate(layoutInflater)
         return viewBindng.root
     }
-
 }
