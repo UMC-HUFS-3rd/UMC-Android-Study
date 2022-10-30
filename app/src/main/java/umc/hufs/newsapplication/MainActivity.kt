@@ -38,17 +38,20 @@ class MainActivity : AppCompatActivity() {
         .OnNavigationItemSelectedListener {
             when (it.itemId) {
                 R.id.top_news -> {
-                    supportFragmentManager.beginTransaction()
+                    supportFragmentManager
+                        .beginTransaction()
                         .replace(viewBinding.framelayout.id, TopNewsFragment())
                         .commit()
                 }
                 R.id.category -> {
-                    supportFragmentManager.beginTransaction()
+                    supportFragmentManager
+                        .beginTransaction()
                         .replace(viewBinding.framelayout.id, CategoryFragment())
                         .commit()
                 }
                 R.id.saved -> {
-                    supportFragmentManager.beginTransaction()
+                    supportFragmentManager
+                        .beginTransaction()
                         .replace(viewBinding.framelayout.id, SavedNewsFragment())
                         .commit()
                 }
