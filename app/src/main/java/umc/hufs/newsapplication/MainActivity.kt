@@ -3,7 +3,6 @@ package umc.hufs.newsapplication
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import umc.hufs.newsapplication.databinding.ActivityMainBinding
-import umc.hufs.newsapplication.databinding.ActivityNewsappBinding
 
 class MainActivity : AppCompatActivity() {
     private lateinit var viewBinding: ActivityMainBinding
@@ -27,7 +26,7 @@ class MainActivity : AppCompatActivity() {
                 R.id.menu_top_news -> {
                     supportFragmentManager
                         .beginTransaction()
-                        .replace(R.id.frame_layout, FragmentTopnews())
+                        .replace(viewBinding.frameLayout.id, FragmentTopnews())
                         .commitAllowingStateLoss()
                     return@setOnItemSelectedListener true
                 }
@@ -35,7 +34,7 @@ class MainActivity : AppCompatActivity() {
                 R.id.menu_categories -> {
                     supportFragmentManager
                         .beginTransaction()
-                        .replace(R.id.frame_layout, FragmentCategories())
+                        .replace(viewBinding.frameLayout.id, FragmentCategories())
                         .commitAllowingStateLoss()
                     return@setOnItemSelectedListener true
                 }
@@ -43,7 +42,7 @@ class MainActivity : AppCompatActivity() {
                 else -> {
                     supportFragmentManager
                         .beginTransaction()
-                        .replace(R.id.frame_layout, FragmentSaved())
+                        .replace(viewBinding.frameLayout.id, FragmentSaved())
                         .commitAllowingStateLoss()
                     return@setOnItemSelectedListener true
                 }

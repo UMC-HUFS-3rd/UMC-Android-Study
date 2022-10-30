@@ -17,4 +17,7 @@ start reading</string>
     <string name="journalist_AnnaDietz">Anna Dietz</string>
     <string name="journalist_KrisHolt">Kris Holt</string>
     <string name="basketball_article_title">Lebron James, Rick and Morty are coming\nto ‘MultiVersus’</string>
+    <string name="first_article_time">3 hours ago</string>
+    <string name="second_article_time">11 hours ago</string>
+    <string name="third_article_time">12 hours ago</string>
 </resources>
