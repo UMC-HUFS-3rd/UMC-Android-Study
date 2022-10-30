@@ -42,20 +42,15 @@ class MainActivity : AppCompatActivity() {
             when (item.itemId) {
                 R.id.menu_news -> {
                     changeFragment(topNewsFragment)
-                    return@setOnItemSelectedListener true
                 }
                 R.id.menu_category -> {
                     changeFragment(categoryFragment)
-                    return@setOnItemSelectedListener true
                 }
                 R.id.menu_save -> {
                     changeFragment(savedNewsFragment)
-                    return@setOnItemSelectedListener true
-                }
-                else -> {
-                    return@setOnItemSelectedListener true
                 }
             }
+            return@setOnItemSelectedListener true
         }
     }
 
