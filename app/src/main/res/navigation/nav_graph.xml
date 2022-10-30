@@ -5,22 +5,22 @@
     android:id="@+id/nav_graph.xml"
     app:startDestination="@layout/fragment_top_news">
     <fragment
-        android:id="@+id/TopNewsFragment"
+        android:id="@+id/top_news"
         android:name="umc.hufs.newsapplication.TopNewsFragment"
         android:label="fragment_top_news"
         tools:layout="@layout/fragment_top_news"/>
+<!--    <fragment-->
+<!--        android:id="@+id/news_detail"-->
+<!--        android:name="umc.hufs.newsapplication.NewsDetailFragment"-->
+<!--        android:label="fragment_news_detail"-->
+<!--        tools:layout="@layout/fragment_news_detail"/>-->
     <fragment
-        android:id="@+id/NewsDetailFragment"
-        android:name="umc.hufs.newsapplication.NewsDetailFragment"
-        android:label="fragment_news_detail"
-        tools:layout="@layout/fragment_news_detail"/>
-    <fragment
-        android:id="@+id/CategoryFragment"
+        android:id="@+id/category"
         android:name="umc.hufs.newsapplication.CategoryFragment"
         android:label="fragment_category"
         tools:layout="@layout/fragment_category"/>
     <fragment
-        android:id="@+id/SavedNewsFragment"
+        android:id="@+id/saved"
         android:name="umc.hufs.newsapplication.SavedNewsFragment"
         android:label="fragment_saved_news"
         tools:layout="@layout/fragment_saved_news"/>
