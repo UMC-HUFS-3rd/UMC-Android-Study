@@ -1,60 +1,48 @@
 package umc.hufs.newsapplication.presentation
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
-import androidx.databinding.DataBindingUtil
-import androidx.fragment.app.Fragment
+import android.view.View
+import androidx.appcompat.app.AppCompatActivity
+import androidx.navigation.NavController
+import androidx.navigation.fragment.NavHostFragment
+import androidx.navigation.ui.setupWithNavController
 import umc.hufs.newsapplication.R
 import umc.hufs.newsapplication.databinding.ActivityMainBinding
-import umc.hufs.newsapplication.presentation.category.CategoryFragment
-import umc.hufs.newsapplication.presentation.common.base.BaseFragment
-import umc.hufs.newsapplication.presentation.news.TopNewsFragment
-import umc.hufs.newsapplication.presentation.save.SavedNewsFragment
 
 class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
 
-    private lateinit var categoryFragment: CategoryFragment
-    private lateinit var topNewsFragment: TopNewsFragment
-    private lateinit var savedNewsFragment: SavedNewsFragment
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = DataBindingUtil.setContentView(this, R.layout.activity_main)
-        binding.lifecycleOwner = this
+        binding = ActivityMainBinding.inflate(layoutInflater)
+        setContentView(binding.root)
+
+        initLifecycleOwner()
 
         initNavigation()
         setNavigationListener()
     }
 
-    private fun initNavigation() {
-        topNewsFragment = TopNewsFragment()
-        categoryFragment = CategoryFragment()
-        savedNewsFragment = SavedNewsFragment()
+    private fun initLifecycleOwner() {
+        binding.lifecycleOwner = this
+    }
 
-        supportFragmentManager.beginTransaction()
-            .replace(R.id.fcv_main, topNewsFragment).commit()
+    private fun initNavigation() {
+        binding.bnvMain.setupWithNavController(findNavController())
+    }
+
+    private fun findNavController(): NavController {
+        val navHostFragment =
+            supportFragmentManager.findFragmentById(binding.fcvMain.id) as NavHostFragment
+        return navHostFragment.navController
     }
 
     private fun setNavigationListener() {
-        binding.bnvMain.setOnItemSelectedListener { item ->
-            when (item.itemId) {
-                R.id.menu_news -> {
-                    changeFragment(topNewsFragment)
-                }
-                R.id.menu_category -> {
-                    changeFragment(categoryFragment)
-                }
-                R.id.menu_save -> {
-                    changeFragment(savedNewsFragment)
-                }
+        findNavController().addOnDestinationChangedListener { _, destination, _ ->
+            binding.bnvMain.visibility = when (destination.id) {
+                R.id.navigation_top_news, R.id.navigation_category, R.id.navigation_save -> View.VISIBLE
+                else -> View.GONE
             }
-            return@setOnItemSelectedListener true
         }
-    }
-
-    private fun changeFragment(fragment: Fragment) {
-        supportFragmentManager.beginTransaction().replace(R.id.fcv_main, fragment).commit()
     }
 }
