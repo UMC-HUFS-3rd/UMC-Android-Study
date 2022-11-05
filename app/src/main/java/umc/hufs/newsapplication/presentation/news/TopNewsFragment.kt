@@ -13,10 +13,19 @@ import umc.hufs.newsapplication.presentation.common.base.BaseFragment
 class TopNewsFragment : BaseFragment<FragmentTopNewsBinding>(R.layout.fragment_top_news) {
 
     private val viewModel: MainViewModel by activityViewModels()
+    private lateinit var topNewsAdapter: TopNewsAdapter
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        viewModel.getDummyNews()
+        initView()
+
+    }
+
+    private fun initView() {
+        val newsList = viewModel.getDummyNews()
+        topNewsAdapter = TopNewsAdapter(requireContext(), newsList)
+
+        binding.rvTopNews.adapter = topNewsAdapter
     }
 }
