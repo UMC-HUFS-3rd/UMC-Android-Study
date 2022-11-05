@@ -2,8 +2,10 @@ plugins {
     id 'com.android.application'
     id 'org.jetbrains.kotlin.android'
     id 'kotlin-kapt'
-    id 'androidx.navigation.safeargs.kotlin'
     id 'kotlin-parcelize'
+    id 'com.google.dagger.hilt.android'
+    id 'kotlinx-serialization'
+    id 'androidx.navigation.safeargs.kotlin'
 }
 
 android {
@@ -42,24 +44,29 @@ dependencies {
     implementation "androidx.core:core-ktx:$core"
     implementation "androidx.appcompat:appcompat:$appCompat"
     implementation "androidx.constraintlayout:constraintlayout:$constraintLayout"
+
     implementation "androidx.navigation:navigation-ui-ktx:$navigation"
     implementation "androidx.navigation:navigation-fragment-ktx:$navigation"
     implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:$lifecycle"
     implementation "androidx.lifecycle:lifecycle-runtime-ktx:$lifecycle"
     implementation "androidx.room:room-ktx:$room"
     implementation "androidx.room:room-runtime:$room"
-    implementation "androidx.paging:paging-runtime-ktx:$paging"
     kapt("androidx.room:room-compiler:$room")
+    implementation "androidx.paging:paging-runtime-ktx:$paging"
+
+    implementation "com.google.dagger:hilt-android:2.43.2"
+    kapt "com.google.dagger:hilt-compiler:2.43.2"
 
     // UI
     implementation "com.google.android.material:material:$material"
 
     // Coroutine
+    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-core:$coroutine"
     implementation "org.jetbrains.kotlinx:kotlinx-coroutines-android:$coroutine"
 
     // Network
     implementation "com.squareup.retrofit2:retrofit:$retrofit"
-    implementation "com.squareup.retrofit2:converter-gson:$retrofit"
+    implementation "com.jakewharton.retrofit:retrofit2-kotlinx-serialization-converter:0.8.0"
     implementation "com.squareup.okhttp3:okhttp:$okHttp"
     implementation "com.squareup.okhttp3:logging-interceptor:$okHttp"
 
@@ -67,9 +74,6 @@ dependencies {
     implementation "com.github.bumptech.glide:glide:$glide"
     kapt("com.github.bumptech.glide:compiler:$glide")
     implementation "com.jakewharton.timber:timber:$timber"
-
-    // DI
-    implementation "io.insert-koin:koin-android:$koin"
 
     // Test
     testImplementation 'junit:junit:4.13.2'
