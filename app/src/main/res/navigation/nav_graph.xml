@@ -9,7 +9,7 @@
         android:id="@+id/listFragment"
         android:name="umc.hufs.newsapplication.ListFragment"
         android:label="fragment_list"
-        tools:layout="@layout/fragment_list" />
+        tools:layout="@layout/list_rv_item" />
 
     <fragment
         android:id="@+id/detailFragment"
