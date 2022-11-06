@@ -6,14 +6,27 @@
     android:layout_height="match_parent">
 
     <TextView
+        android:id="@+id/tv_articleTitle"
+        android:layout_width="310dp"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:minLines="3"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="17dp"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
         android:id="@+id/tv_journalistName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textColor="@color/black"
         android:textSize="15sp"
         android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="@id/articleTitle"
-        app:layout_constraintTop_toBottomOf="@id/articleTitle"
+        app:layout_constraintStart_toStartOf="@id/tv_articleTitle"
+        app:layout_constraintTop_toBottomOf="@id/tv_articleTitle"
         android:layout_marginTop="15dp"
         />
 
@@ -29,7 +42,7 @@
         android:layout_marginLeft="10dp"/>
 
     <ImageView
-        android:id="@+id/tv_articlePhoto"
+        android:id="@+id/iv_articlePhoto"
         android:layout_width="370dp"
         android:layout_height="250dp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -43,24 +56,13 @@
         android:textColor="@color/black"
         android:textStyle="bold"
         android:textSize="13sp"
-        app:layout_constraintTop_toBottomOf="@id/tv_articlePhoto"
+        app:layout_constraintTop_toBottomOf="@id/iv_articlePhoto"
         app:layout_constraintStart_toStartOf="@id/tv_articleTitle"
-        app:layout_constraintEnd_toEndOf="@id/tv_articlePhoto"
+        app:layout_constraintEnd_toEndOf="@id/iv_articlePhoto"
         android:layout_marginTop="8dp"
         />
 
-    <TextView
-        android:id="@+id/tv_articleTitle"
-        android:layout_width="310dp"
-        android:layout_height="wrap_content"
-        android:textColor="@color/black"
-        android:textSize="18sp"
-        android:textStyle="bold"
-        android:minLines="3"
-        app:layout_constraintStart_toStartOf="parent"
-        android:layout_marginLeft="15dp"
-        android:layout_marginTop="17dp"
-        />
+
 
 
 

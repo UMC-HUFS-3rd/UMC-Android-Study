@@ -10,6 +10,7 @@ class TopnewsRVAdapter(private val dataList: ArrayList<TopnewsData>): RecyclerVi
     inner class TopnewsDataViewHolder(private val viewBinding: ItemNewsBinding): RecyclerView.ViewHolder(viewBinding.root) {
         fun bind(data: TopnewsData) {
             viewBinding.tvHeadline.text = data.title.toString()
+            viewBinding.ivNewsPic.setImageResource(data.pic)
             viewBinding.tvTime.text = data.time.toString()
             viewBinding.tvJournalist.text = data.name.toString()
         }

@@ -6,6 +6,7 @@ import android.widget.ImageView
 
 data class NewsContentData(
     val title: String,
+    val pic: Int,
     val name: String,
     val time: String,
     val content: String,
