@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_bottom"
+    app:startDestination="@id/navigation_top_news">
+
+    <fragment
+        android:id="@+id/navigation_category"
+        android:name="umc.hufs.newsapplication.presentation.category.CategoryFragment"
+        android:label="CategoryFragment"
+        tools:layout="@layout/fragment_category">
+        <action
+            android:id="@+id/action_category_to_category_news"
+            app:destination="@id/navigation_category_news" />
+    </fragment>
+    <fragment
+        android:id="@+id/navigation_category_news"
+        android:name="umc.hufs.newsapplication.presentation.category.CategoryNewsFragment"
+        android:label="CategoryNewsFragment"
+        tools:layout="@layout/fragment_category_news">
+        <action
+            android:id="@+id/action_category_news_to_news_detail"
+            app:destination="@id/navigation_news_detail" />
+    </fragment>
+    <fragment
+        android:id="@+id/navigation_save"
+        android:name="umc.hufs.newsapplication.presentation.save.SavedNewsFragment"
+        android:label="SavedNewsFragment"
+        tools:layout="@layout/fragment_saved_news">
+        <action
+            android:id="@+id/action_save_to_news_detail"
+            app:destination="@id/navigation_news_detail" />
+    </fragment>
+    <fragment
+        android:id="@+id/navigation_top_news"
+        android:name="umc.hufs.newsapplication.presentation.news.TopNewsFragment"
+        android:label="TopNewsFragment"
+        tools:layout="@layout/fragment_top_news">
+        <action
+            android:id="@+id/action_top_news_to_news_detail"
+            app:destination="@id/navigation_news_detail" />
+    </fragment>
+    <fragment
+        android:id="@+id/navigation_news_detail"
+        android:name="umc.hufs.newsapplication.presentation.detail.NewsDetailFragment"
+        android:label="NewsDetailFragment"
+        tools:layout="@layout/fragment_news_detail" />
+</navigation>
