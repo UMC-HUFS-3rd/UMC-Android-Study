@@ -15,7 +15,7 @@ class FragmentSaved: Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        viewBinding = FragmentSavedBinding.inflate(layoutInflater)
+        viewBinding = FragmentSavedBinding.inflate(inflater, container, false)
         return viewBinding.root
 
 

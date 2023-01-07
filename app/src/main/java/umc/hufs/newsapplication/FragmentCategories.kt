@@ -19,11 +19,17 @@ class FragmentCategories: Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        viewBinding = FragmentCategoriesBinding.inflate(layoutInflater)
+        viewBinding = FragmentCategoriesBinding.inflate(inflater, container, false)
         return viewBinding.root
 
+
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
         val dataList: ArrayList<CategoriesData> = arrayListOf()
-        
+
         dataList.apply {
             add(CategoriesData(R.drawable.ic_business, "business"))
             add(CategoriesData(R.drawable.ic_outline_music_note_24, "entertainment"))

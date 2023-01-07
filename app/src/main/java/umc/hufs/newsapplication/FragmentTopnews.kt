@@ -16,8 +16,12 @@ class FragmentTopnews: Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        viewBinding = FragmentTopnewsBinding.inflate(layoutInflater)
+        viewBinding = FragmentTopnewsBinding.inflate(inflater, container, false)
         return viewBinding.root
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
 
         val dataList: ArrayList<TopnewsData> = arrayListOf()
 
@@ -30,7 +34,5 @@ class FragmentTopnews: Fragment() {
 
         viewBinding.rvTopNews.adapter = topnewsRVAdapter
         viewBinding.rvTopNews.layoutManager = LinearLayoutManager(requireContext())
-
-
     }
 }
